@@ -1,0 +1,12 @@
+digraph {
+	graph [bgcolor=transparent]
+	edge [color=White, fontcolor=White]
+	node [color=White, fontcolor=White]
+		Retrospective -> Personal;
+		Retrospective -> "Work related";
+		"Work related" -> Target;
+		"Work related" -> Regular;
+		Target -> "Specific Issue";
+		Target -> "End of Project";
+	}
+	
