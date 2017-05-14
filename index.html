@@ -42,109 +42,68 @@
 			<div class="slides">
 				<section>
 					<h1>TDD</h1>
-					<h2>Build better software</h2>
 					<p>
 						<small>Created by <a href="http://lewandowski.io">Michał Lewandowski</a> / <a href="http://twitter.com/lewandm4">@lewandm4</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Gratification</h2>
-					<h3 class="fragment">TDD is an investment</h3>
 				</section>
 
 				<section>
-					<h2>Evolution</h2>
-					<h3 class="fragment">Lasse Koskela in "TDD and Acceptance TDD"</h3>
+					<h2>Poziom -1</h2>
+					<h3 class="fragment">Nie piszę testów</h3>
+				</section>
+
+				<section>
+					<h2>Poziom 0</h2>
+					<h3 class="fragment">Nie piszę testów, ale wiem dlaczego</h3>
+				</section>
+
+				<section>
+					<h2>Poziom 0.5</h2>
+					<h3 class="fragment">Test first</h3>
+				</section>
+
+				<section>
+					<h2>Poziom 1</h2>
+					<h3 class="fragment">TDD</h3>
+				</section>
+
+				<section>
+					<h2>TDD</h2>
+					<h3>Reguła 1</h3>
 					<blockquote class="fragment">
-						&ldquo;TDD is a technique that evolves together with the practitioner.&rdquo;
+						&ldquo;Nie możesz napisać żadnego produkcyjnego kodu, dopóki nie będziesz miał nie przechodzącego testu.&rdquo;
 					</blockquote>
 				</section>
 
 				<section>
-					<h1>Level 1</h1>
-					<h2>Fundamentals</h2>
+					<h2>TDD</h2>
+					<h3>Reguła 2</h3>
+					<blockquote class="fragment">
+						&ldquo;Nie możesz napisać więcej testu, jeżeli ten test nie przechodzi. Błąd kompilacji jest nie działajcym testem.&rdquo;
+					</blockquote>
+				</section>
+
+
+				<section>
+					<h2>TDD</h2>
+					<h3>Reguła 3</h3>
+					<blockquote class="fragment">
+						&ldquo;Nie możesz napisać więcej kodu produkcyjnego, niż ten wymagany do przejścia obecnego testu.&rdquo;
+					</blockquote>
 				</section>
 
 				<section>
-					<h4>Level 1</h4>
-					<h2>TDD Circle</h2>
+					<h2>TDD</h2>
 					<img src="images/circle.gif">
-
 				</section>
 
 				<section>
-					<h4>Level 1</h4>
-					<h2>Benefits</h2>
-					<ul>
-						<li>High code coverage</li>
-						<li>Short feedback loop</li>
-						<li>Regression testing</li>
-					</ul>
-				</section>
-
-				<!-- Opowiadam hisotorię o tym, że wymagania łatwo wchodzą-->
-				<!-- Behaviour DD-->
-				<section>
-					<h1>Level 2</h1>
-					<h2>Requirements</h2>
-				</section>
-
-				<section>
-					<h4>Level 2</h4>
-					<h2>Working with tasks</h2>
-				</section>
-
-				<section>
-					<h4>Level 2</h4>
-					<h2>Evolving task list - 1</h2>
-					<ul>
-						<li><strike>Skip not defined account</strike></li>
-						<li>Skip not configured account</li>
-						<li>Email sent - create a task</li>
-						<li>Support email unsubsribed</li>
-					</ul>
-				</section>
-
-				<section>
-					<h4>Level 2</h4>
-					<h2>Evolving task list - 2</h2>
-					<ul>
-						<li><strike>Skip not defined account</strike></li>
-						<li><b>Skip not configured account</b></li>
-						<li>Email sent - create a task</li>
-						<li>Support email unsubsribed</li>
-					</ul>
-				</section>
-
-				<section>
-					<h4>Level 2</h4>
-					<h2>Evolving task list - 3</h2>
-					<ul>
-						<li><strike>Skip not defined account</strike></li>
-						<li><b>Skip not configured account</b></li>
-						<font color="orange"><li>Report error on wrong mapping</li></font>
-						<li>Email sent - create a task</li>
-						<li>Support email unsubsribed</li>
-					</ul>
-				</section>
-
-				<section>
-					<h4>Level 2</h4>
-					<h2>Evolving task list - 4</h2>
-					<ul>
-						<li><strike>Skip not defined account</strike></li>
-						<li><strike>Skip not configured account</strike></li>
-						<li>Report error on wrong mapping</li>
-						<li>Email sent - create a task</li>
-						<li>Support email unsubsribed</li>
-					</ul>
-				</section>
-
-				<section>
-					<h4>Level 2</h4>
-					<h2 class="fragment">Cucumber</h2>
-					<pre><code>
+					<h4>Poziom 2</h4>
+					<h2 class="fragment">Biznes</h2>
+					<pre class="fragment"><code>
 Scenario: Customer has a broker policy so DOB is requested
   Given I have a "Broker" policy
   When I submit my policy number
@@ -153,53 +112,25 @@ Scenario: Customer has a broker policy so DOB is requested
 				</section>
 
 				<section>
-					<h4>Level 2</h4>
-					<h2>BDD</h2>
+					<h4>Poziom 3</h4>
+					<h2 class="fragment">Kodzik</h2>
 				</section>
 
 				<section>
-					<h4>Level 2</h4>
-					<h2>Benefits</h2>
-					<ul>
-						<li>Focus on requirements</li>
-						<li>Tests are executable specification</li>
-					</ul>
-				</section>
-
-				<section>
-					<h1>Level 3</h1>
-					<h2>Understanding</h2>
-				</section>
-
-				<section>
-					<h4>Level 3</h4>
-					<h2>TDDesign</h2>
-				</section>
-
-				<section>
-					<h4>Level 3</h4>
-					<blockquote>
-						&ldquo;Show me your tests, and I will tell you everything about your production code.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h4>Level 3</h4>
+					<h2>Kodzik</h2>
 					<img src="images/beton.jpg">
 				</section>
 
 				<section>
-					<h4>Level 3</h4>
-					<h2>Benefits</h2>
-					<ul>
-						<li>Code easy to rewrite</li>
-						<li>Clean architecture</li>
-					</ul>
+					<h2>Zakończenie</h2>
+					<blockquote class="fragment">
+						&ldquo;TDD is a technique that evolves together with the practitioner.&rdquo;
+					</blockquote>
+					<small><i class="fragment">Lasse Koskela - "TDD and Acceptance TDD"</i></small>
 				</section>
 
-
 				<section>
-					<h1>Thank you</h1>
+					<h1>TDD</h1>
 					<a href="tdd.lewandowski.io">tdd.lewandowski.io</a>
 				</section>
 			</div>
