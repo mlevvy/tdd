@@ -40,96 +40,479 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+				<section data-timing="72">
 					<h1>TDD</h1>
 					<p>
 						<small>Created by <a href="http://lewandowski.io">Michał Lewandowski</a> / <a href="http://twitter.com/lewandm4">@lewandm4</a></small>
 					</p>
+					<aside class="notes">
+						<ul>
+						  <li>Witaj</li>
+						  <li>Filozofia</li>
+						  <li>Wady/Zalety</li>
+						  <li>No Code. NIEZALEZNE OD JEZYKA</li>
+						  <li>Domena TDD jest wąska</li>
+						  <li>Inne: Zipkin, Java9</li>
+						  <li>Nie będę sprzedawał TDD. Realne spojrzenie</li>
+						  <li>O mnie: Personalnie</li>
+						  <li>O mnie: Allegro</li>
+						</ul>
+					</aside>
 				</section>
 
-				<section>
+				<section data-timing="60">
+					<h1>Agenda</h1>
+					<ul>
+						  <li>Droga do TDD</li>
+						  <li class="fragment">Krok 1 - By the book</li>
+						  <li class="fragment">Krok 2 - Wzornictwo</li>
+						  <li class="fragment">Krok 3 - Architektura</li>
+						  <li class="fragment">Post TDD</li>
+						  <li class="fragment">Zakończenie</li>
+						</ul>
+					<aside class="notes">
+						<ul>
+						  <li>Droga TDD: Przed TDD</li>
+						  <li>Torba</li>
+						  <li>SZYBKIE Pytnia - pomiędzy sekcjami</li>
+						  <li>DYSKUSJE Pytnia - po prezentacji</li>
+						  <li>Gadżety do rozdania</li>
+						  <li>1 minutę wcześniej</li>
+						</ul>
+					</aside>
 				</section>
 
-				<section>
-					<h2>Poziom -1</h2>
-					<h3 class="fragment">Nie piszę testów</h3>
+				<section data-timing="5">
+					<h1>Rozdział 1</h1>
+					<h2>Droga do TDD</h2>
 				</section>
 
-				<section>
-					<h2>Poziom 0</h2>
-					<h3 class="fragment">Nie piszę testów, ale wiem dlaczego</h3>
+				<section data-timing="72">
+					<h2>Rok 2001</h2>
+					<aside class="notes">
+						<ul>
+						  <li>11 września - atak na USA</li>
+						  <li>Pentium 4</li>
+						  <li>Bańka internetowa Yahoo 118->4</li>
+						  <li>TDD miało się nardzoić</li>
+						  <li>Swiat przed TDD</li>
+						</ul>
+					</aside>
 				</section>
 
-				<section>
-					<h2>Poziom 0.5</h2>
-					<h3 class="fragment">Test first</h3>
+				<section data-timing="160">
+					<h2>Czarny scenariusz</h2>
+					<aside class="notes">
+						<ul>
+						  <li>Powracający błąd</li>
+						  <li>Długi czas developmentu każdej zmiany</li>
+						  <li>Odpychanie starych zmian</li>
+						</ul>
+					</aside>
 				</section>
 
-				<section>
-					<h2>Poziom 1</h2>
-					<h3 class="fragment">TDD</h3>
+				<section data-timing="70">
+					<h2>Książka</h2>
+					<div clsass="fragment">
+					<p class="fragment">Test Driven Development: By Example</p>
+					<p class="fragment">Kent Beck</p>
+					<img class="fragment" src="images/beck.png">
+					<aside class="notes">
+						<ul>
+						  <li>Politechnika</li>
+						  <li>Czy wszędzie to stosować?</li>
+						  <li>Gdzie działą, gdzie nie działa?</li>
+						</ul>
+					</aside>
 				</section>
 
-				<section>
+				<section data-timing="210">
+					<h2>Nie działa</h2>
+					<ul>
+						  <li>100% pokrycia</li>
+						  <li class="fragment">Prototypowanie</li>
+						  <li class="fragment">Game Dev</li>
+						  <li class="fragment">UI (?) / Wygląd</li>
+						  <li class="fragment">Data Science</li>
+					</ul>
+					<aside class="notes">
+						<ul>
+						  <li>Czy kod bez testów to zły kod? Nie</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-timing="30">
+					<h2>Działa</h2>
+					<ul>
+						  <li>Domena</li>
+					</ul>
+					<aside class="notes">
+						<ul>
+						  <li>Mięsko</li>
+						  <li>Tygryski lubią najbardziej</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-timing="120">
+					<h2>Zaskoczenie</h2>
+						<aside class="notes">
+						<ul>
+						  <li>Politechnika. Matlab</li>
+						  <li>Kilka lini -> wykres</li>
+						  <li>Własne implementacje. Na czas</li>
+						  <li>Na szybko. A potem utrzymuj</li>
+						  <li>Przykład z życia codziennego</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-timing="120">
+					<h2>Próba nr 1</h2>
+					<h6 class="fragment">Test First</h6>
+					<aside class="notes">
+						<ul>
+						  <li>12 testów</li>
+						  <li>Widać postęp</li>
+						  <li>Klient widzi, że działa</li>
+						  <li>Za pół roku klapa</li>
+						  <li>Przemycone funkcjonalności</li>
+						  <li>TDD to nie to samo co Test First</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-timing="5">
+					<h1>Rozdział 2</h1>
+					<h2>Krok 1 - By the book</h2>
+					<aside class="notes">
+						<ul>
+						  <li>Zobaczyliśmy straszny świat bez testów, bez TDD</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-timing="120">
+					<h2>Czym jest TDD?</h2>
+						<ul>
+						  <li class="fragment">Długoterminowa inwestycja</li>
+						  <li class="fragment">Dyscyplina</li>
+						</ul>
+					<p class="fragment">A w praktyce?</p>
+					<aside class="notes">
+						<ul>
+						  <li>Dziecko</li>
+						  <li>Rytuał</li>
+						  <li>Konsekwencja</li>
+						  <li>Długi termin zwrotu</li>
+						</ul>
+					</aside>
+				</section>		
+
+				<section data-timing="40">
 					<h2>TDD</h2>
 					<h3>Reguła 1</h3>
 					<blockquote class="fragment">
 						&ldquo;Nie możesz napisać żadnego produkcyjnego kodu, dopóki nie będziesz miał nie przechodzącego testu.&rdquo;
 					</blockquote>
+					<aside class="notes">
+						<ul>
+						  <li>Już zaczynasz.</li>
+						  <li>Nowy projekt</li>
+						  <li>Chęć kodowania</li>
+						  <li>BOOM. Walisz głową w mur</li>
+						</ul>
+					</aside>
 				</section>
 
-				<section>
+				<section data-timing="40">
 					<h2>TDD</h2>
 					<h3>Reguła 2</h3>
 					<blockquote class="fragment">
 						&ldquo;Nie możesz napisać więcej testu, jeżeli ten test nie przechodzi. Błąd kompilacji jest nie działajcym testem.&rdquo;
 					</blockquote>
+					<aside class="notes">
+						<ul>
+						  <li class="fragment">Pokusa dokończenia testu na 100%</li>
+						  <li>BOOM. Walisz głową w mur</li>
+						</ul>
+					</aside>
 				</section>
 
-
-				<section>
+				<section data-timing="40">
 					<h2>TDD</h2>
 					<h3>Reguła 3</h3>
 					<blockquote class="fragment">
 						&ldquo;Nie możesz napisać więcej kodu produkcyjnego, niż ten wymagany do przejścia obecnego testu.&rdquo;
 					</blockquote>
-				</section>
+					<aside class="notes">
+						<ul>
+						  <li>Przestroga, że dodasz zbędne ficzery</li>
+						</ul>
+					</aside>
+				</section>	
 
-				<section>
-					<h2>TDD</h2>
+				<section data-timing="80">
+					<h2>Red Green Refactor</h2>
 					<img src="images/circle.gif">
+					<aside class="notes">
+						<ul>
+						  <li>Proporcje! Ile jakich zadań.</li>
+						  <li>Systematyczność refaktoringu</li>
+						</ul>
+					</aside>
+				</section>	
+
+				<section data-timing="120">
+					<h2>Testy unitowe</h2>
+					<h4>Co powinien testować test unitowy?</h4>
+					<aside class="notes">
+						<ul>
+						  <li>Klasa, pakiet, moduł?</li>
+						  <li>Wysoki poziom/Niski poziom</li>
+						  <li>Kod testowy jest unitowy</li>
+						  <li>1 funkcjonalność</li>
+						  <li>W izolacji</li>
+						  <li>Powtarzalnie</li>
+						</ul>
+					</aside>
 				</section>
 
-				<section>
-					<h4>Poziom 2</h4>
-					<h2 class="fragment">Biznes</h2>
+
+				<section data-timing="80">
+					<h2>Code coverage</h2>
+					<h4>Czy należy się tego bać?</h4>
+					<img class="fragment" src="images/icon.png">
+					<br>
+					<img class="fragment" src="images/code_coverage.png">
+					<aside class="notes">
+						<ul>
+						  <li>Output: Linie, procenty</li>
+						  <li>Widzimy dziury</li>
+						  <li>To jest check czy mamy pełne TDD</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-timing="90">
+					<h2>Coś poszło nie tak</h2>
+					<img class="fragment" src="images/beton.jpg">
+					<aside class="notes">
+						<ul>
+						  <li>Obserwacja: Zmiana produkcyjnego kodu -> Zmiana tony testów</li>
+						  <li>Obserwacja: Testy nie były unitowe (nie testowały jednej rzeczy)</li>
+						  <li>Rada: Wyczucie</li>
+						  <li>Rada: Refactoring</li>
+						  <li>Rada: Twój kod testowy jest tak samo ważny</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-timing="30">
+					<h1>Rozdział 3</h1>
+					<h2>Krok 2 - Wzornictwo</h2>
+					<aside class="notes">
+						<ul>
+						  <li>Dyscyplina i przestrzeganie reguł</li>
+						  <li>Sama dyscyplina nie wystarcza</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-timing="210">
 					<pre class="fragment"><code>
 Scenario: Customer has a broker policy so DOB is requested
   Given I have a "Broker" policy
   When I submit my policy number
   Then I should be asked for my date of birth
   					</code></pre>
+  					<aside class="notes">
+						<ul>
+						  <li>TDD Odnosi sukcesy</li>
+						  <li>Więcej czasu dla nas</li>
+						  <li>Poznajemy biznes. Poznajemy nowe sposoby</li>
+						  <li>Dwa światy</li>
+						  <li>Code Review dla Tomka N.</li>
+						  <li>Najlepsze z obydwu</li>
+						  <li>Biznes i tak na to nie spojrzy</li>
+						</ul>
+					</aside>
 				</section>
 
-				<section>
-					<h4>Poziom 3</h4>
-					<h2 class="fragment">Kodzik</h2>
+				<section data-timing="35">
+					<h3 class="fragment">Testuj zachowanie</h3>
+					<h3 class="fragment">Nie testuj implementacji</h3>
+  					<aside class="notes">
+						<ul>
+						  <li>Testuj metody biznesowe</li>
+						  <li>Nie: dla implementacji</li>
+						  <li>Lewandowski powiedział...</li>
+						  <li>Nie testuj zbędnych detali</li>
+						</ul>
+					</aside>
 				</section>
 
-				<section>
-					<h2>Kodzik</h2>
-					<img src="images/beton.jpg">
+				<section data-timing="90">
+					<h2>Coś poszło nie tak</h2>
+					<aside class="notes">
+						<ul>
+						  <li>Zachłysneliśmy się testami behavioralnymi</li>
+						  <li>Testy nie przechodzą. Nie są stabilne.</li>
+						  <li>Srodowisko, zależności</li>
+						  <li>Sprowadź je do testów unitowych</li>
+						</ul>
+					</aside>
+				</section>	
+
+				<section data-timing="20">
+					<h1>Rozdział 4</h1>
+					<h2>Krok 3 - Architektura</h2>
+					<aside class="notes">
+						<ul>
+						  <li>BYLO: Jak chodzić: Podstawy od GURU</li>
+						  <li>BYLO: Jak biegać: Testowaniu zachowania</li>
+						  <li>BEDZIE: Po co ja to robię?</li>
+						</ul>
+					</aside>
 				</section>
 
-				<section>
-					<h2>Zakończenie</h2>
-					<blockquote class="fragment">
+				<section data-timing="90">
+					<h2>Mój projekt</h2>
+					<h4 class="fragment">Napisz takie testy, żeby dało się z nich odtworzyć system</h4>
+					<aside class="notes">
+						<ul>
+						  <li>Budzisz, znasz cały system.</li>
+						  <li>Rozmawiasz: Przed, po</li>
+						  <li>Czynnik: Ludzie, Technologia, Lider?</li>
+						  <li>Testy pozwalają nam szybko iść do przodu. Zmieniać kod produkcyjny.</li>
+						  <li>Jak dojść do takiej architektury?</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-timing="35">
+					<h4>Czy testy unitowe pokażą mi bugi w kodzie?</h4>
+					<aside class="notes">
+						<ul>
+						  <li>Kot miał sytuacje, że testy przechodz a aplikacja nie działa?</li>
+						  <li>Manualne, lub bardzo wysoko poziomowe</li>
+						  <li>Unitowe piszesz po to, żeby wypracować architekturę</li>
+						  <li>W jakim kierunku zmierzać?</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-timing="60">
+					<h4>W stronę jakiej architektury się kierować?</h4>
+					<aside class="notes">
+						<ul>
+						  <li>Porty/Adaptery, Cebulka, Hexagonalna</li>
+						  <li>Wartstwa komunikacji. Warstwa mięska.</li>
+						  <li>Zew: Mało testów</li>
+						  <li>Wew: Dużo testów</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-timing="70">
+					<h4>Jestem jedno-wątkowy</h4>
+					<p class="fragment">Oddziel rozwiązywanie problemu, od tworzenia rozwiązania</p>
+					<aside class="notes">
+						<ul>
+						  <li>Przyznaj się: Jestem jedno wątkowy</li>
+						  <li>Red (solucja), Refactor (architektura)</li>
+						  <li>Np: Kartka</li>
+						  <li>Rozdzielenie: rozwiązanie problemu, inżyniersko poprawnie</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-timing="60">
+					<h4>Jak przetestować metodę prywatą?</h4>
+					<p class="fragment">Najlepszym sposobem testowania metod prywatnych, jest nie testowanie ich bezpośrednio.</p>
+					<aside class="notes">
+						<ul>
+						  <li>Dotyczy każdego</li>
+						  <li>Częsty problem</li>
+						  <li>Odpowiedź jest prosta</li>
+						  <li>Ponieważ: Testuj zachowanie, nie implementację</li>
+						  <li>Ponieważ: detal, który się może zmienić</li>
+						  <li>Ponieważ: Nie ma wpływu na biznes</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-timing="90">
+					<h2>Coś poszło nie tak</h2>
+					<h4>Testowałem nie to co trzeba</h4>
+					<aside class="notes">
+						<ul>
+						  <li>Zrospaczony kolega</li>
+						  <li>Moje testy są do piachu</li>
+						  <li>Dobre testy, łączące biznes i UNITOWOść</li>
+						  <li>SOAP i XML na JSON</li>
+						  <li>Rada: Cebulka</li>
+						  <li>Rada: Kilka testów na zewnętrzną warstwę</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-timing="25">
+					<h1>Rozdział 5</h1>
+					<h2>Post TDD</h2>
+					<aside class="notes">
+						<ul>
+						  <li>BYLO: Jak chodzić: Podstawy od GURU</li>
+						  <li>BYLO: Jak biegać: Testowaniu zachowania</li>
+						  <li>BYLO: TDD, służy architekturze</li>
+						  <li>NEXT: Wysoki punkt widzenia</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-timing="80">
+					<h2>Świadom wad...</h2>
+						<ul>
+						  <li class="fragment">TDD nas spowalnia</li>
+						  <li class="fragment">TDD nas blokuje</li>
+						  <li class="fragment">Nieczytelne testy</li>
+						  <li class="fragment">Zależne testy</li>
+						</ul>
+				</section>
+
+				<section data-timing="60">
+					<h2>Ciągły rozwój</h2>
+					<blockquote>
 						&ldquo;TDD is a technique that evolves together with the practitioner.&rdquo;
 					</blockquote>
-					<small><i class="fragment">Lasse Koskela - "TDD and Acceptance TDD"</i></small>
+					<small><i>Lasse Koskela - "TDD and Acceptance TDD"</i></small>
+					<aside class="notes">
+						<ul>
+						  <li>To chciałęm pokazać dzisiejszą prezentacją. Rozwój.</li>
+						  <li>Nie da się nauczyć TDD, "jedynm" projektem</li>
+						  <li>Potrzeba kilku miesięcy</li>
+						  <li>Nie mieć space na eksperymenty. Nie każdy projekt to ma.</li>
+						</ul>
+					</aside>
 				</section>
 
-				<section>
+				<!-- ROZDZIALY !!!!!!!!!!!!!!!!!!! -->
+
+				<section data-timing="1">
+					<h1>Rozdział 6</h1>
+					<h2>Zakończenie</h2>
+				</section>
+
+
+				<section data-timing="120">
+					<h2 class="fragment">"Right tool for the job"</h2>
+				</section>
+
+				<!-- STARE !!!!!!!!!!!!!!!!!!! -->
+				
+
+				<section data-timing="30">
 					<h1>TDD</h1>
 					<a href="tdd.lewandowski.io">tdd.lewandowski.io</a>
 				</section>
@@ -149,6 +532,7 @@ Scenario: Customer has a broker policy so DOB is requested
 				progress: false,
 				history: true,
 				center: true,
+				defaultTiming: 120,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
